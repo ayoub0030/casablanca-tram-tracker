@@ -1,54 +1,83 @@
-# React + TypeScript + Vite
+# Casablanca Tram Tracker
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+![Casablanca Tram](https://images.unsplash.com/photo-1569839333583-7375336cde4b?q=80&w=1000&auto=format&fit=crop)
 
-Currently, two official plugins are available:
+## Overview
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Casablanca Tram Tracker is a responsive single-page web application that provides real-time tracking and information for Casablanca's tram network. The application allows users to view tram routes on an interactive map, track simulated tram movements, and find the nearest tram station based on their current location.
 
-## Expanding the ESLint configuration
+## Features
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+- **Interactive Map**: Centered on Casablanca with visualization of tram routes
+- **Real-time Tram Tracking**: Simulated tram movement along the routes
+- **Nearest Station Finder**: Calculates the closest station and estimated arrival time based on user's geolocation
+- **Dark/Light Mode**: Toggle between dark and light themes for comfortable viewing
+- **Responsive Design**: Optimized for both mobile and desktop devices
+- **Informative Content**: Details about Casablanca's tram network and future plans
 
-```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
+## Tech Stack
+
+- **React** with **TypeScript** (Vite setup)
+- **Tailwind CSS** for styling
+- **react-leaflet** with OpenStreetMap for interactive maps
+- Modern ES modules and functional components
+- Custom hooks for geolocation and tram simulation
+
+## Project Structure
+
+```
+casablanca-tram-tracker/
+├── src/
+│   ├── components/
+│   │   ├── layout/       # Header, Footer, Intro, InfoArticle
+│   │   └── map/          # TramMap, NearestStationCard
+│   ├── hooks/            # Custom React hooks
+│   ├── utils/            # Utility functions
+│   ├── types/            # TypeScript type definitions
+│   └── data/             # Tram route and station data
+├── public/               # Static assets
+└── ...config files       # Vite, Tailwind, TypeScript configs
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+## Getting Started
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+1. Clone the repository:
+   ```
+   git clone https://github.com/ayoub0030/casablanca-tram-tracker.git
+   ```
 
-export default tseslint.config({
-  plugins: {
-    // Add the react-x and react-dom plugins
-    'react-x': reactX,
-    'react-dom': reactDom,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended typescript rules
-    ...reactX.configs['recommended-typescript'].rules,
-    ...reactDom.configs.recommended.rules,
-  },
-})
-```
+2. Install dependencies:
+   ```
+   cd casablanca-tram-tracker
+   npm install
+   ```
+
+3. Start the development server:
+   ```
+   npm run dev
+   ```
+
+4. Open your browser and navigate to:
+   ```
+   http://localhost:5173
+   ```
+
+## Screenshots
+
+*Coming soon*
+
+## Future Enhancements
+
+- Integration with real-time tram data API when available
+- User accounts for saving favorite routes and stations
+- Push notifications for tram arrivals
+- Journey planning functionality
+- Multi-language support (Arabic, French, English)
+
+## License
+
+This project is licensed under the MIT License - see the LICENSE file for details.
+
+## Author
+
+- [Ayoub](https://github.com/ayoub0030)
