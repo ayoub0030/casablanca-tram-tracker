@@ -1,0 +1,17 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Custom styles */
+body {
+  @apply bg-white text-gray-800 dark:bg-gray-900 dark:text-white;
+}
+
+.tram-marker {
+  color: #ff6600;
+}
+
+/* Transition for dark mode */
+.transition-colors {
+  @apply transition-all duration-200;
+}
